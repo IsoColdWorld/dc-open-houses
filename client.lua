@@ -68,7 +68,7 @@ CreateThread(function()
         local PlayerCoords = GetEntityCoords(PlayerPedId())
         local Nearby = false
         for i = 1, #Config.OpenHouses do
-            if #(PlayerCoords - Config.OpenHouses[i].center) <= 30 then
+            if #(PlayerCoords - Config.OpenHouses[i].center) <= 70 then
                 Nearby = true
                 if ClosestHouse then
                     if #(PlayerCoords - Config.OpenHouses[i].center) < #(PlayerCoords - ClosestHouse.center) then
