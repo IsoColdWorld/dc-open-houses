@@ -4,7 +4,7 @@ function GetClosestHouseIndex(source)
     local PlayerCoords = GetEntityCoords(GetPlayerPed(source))
     local ClosestHouseIndex
     for i = 1, #Config.OpenHouses do
-        if #(PlayerCoords - Config.OpenHouses[i].center) <= 30 then
+        if #(PlayerCoords - Config.OpenHouses[i].center) <= 1000 then
             if ClosestHouseIndex then
                 if #(PlayerCoords - Config.OpenHouses[i].center) < #(PlayerCoords - Config.OpenHouses[ClosestHouseIndex].center) then
                     ClosestHouseIndex = i
